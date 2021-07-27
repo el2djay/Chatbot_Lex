@@ -1,0 +1,58 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "Image",
+              "style": "Person",
+              "url": "https://repeatablerobots0.sharepoint.com/:i:/s/TestingSite/ERf4qK6wkYFJhhPkRgj16qIBDA3Av4g1QG4DdghNtqCT5Q?e=61Kysq",
+              "size": "Medium"
+            }
+          ],
+          "width": "auto"
+        },
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "weight": "Bolder",
+              "text": "${FirstName} ${LastName}",
+              "wrap": true,
+              "size": "Large"
+            },
+            {
+              "type": "TextBlock",
+              "weight": "Bolder",
+              "text": "${Role}"
+            },
+            {
+              "type": "TextBlock",
+              "weight": "Bolder",
+              "text": "${Department} Department",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "weight": "Bolder",
+              "text": "${Email}"
+            },
+            {
+              "type": "TextBlock",
+              "weight": "Bolder",
+              "text": "${Phone}"
+            }
+          ],
+          "width": "stretch"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2"
+}

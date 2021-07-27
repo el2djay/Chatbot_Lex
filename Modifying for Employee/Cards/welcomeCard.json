@@ -1,0 +1,24 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "spacing": "medium",
+      "size": "default",
+      "weight": "bolder",
+      "text": "Welcome to the chatbot!",
+      "wrap": true,
+      "maxLines": 0
+    },
+    {
+      "type": "TextBlock",
+      "size": "default",
+      "isSubtle": true,
+      "text": "I can answer questions relating to **employee lookup**, by last name or role. I can also answer questions relating to **human resources**, including information on retirement, benefits, and holidays.",
+      "wrap": true,
+      "maxLines": 0
+    }
+  ]
+}
