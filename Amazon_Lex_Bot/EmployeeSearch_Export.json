@@ -1,0 +1,357 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "EmployeeSearch",
+    "version": "9",
+    "intents": [
+      {
+        "name": "EmployeeIntent",
+        "version": "38",
+        "fulfillmentActivity": {
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:921000151651:function:NewEmployee",
+            "messageVersion": "1.0"
+          },
+          "type": "CodeHook"
+        },
+        "sampleUtterances": [
+          "search employee",
+          "Find employee",
+          "Find worker",
+          "directory",
+          "employee directory",
+          "staff directory",
+          "workers search",
+          "search an employee",
+          "I would like to search employee directory",
+          "I would like to search for an employee",
+          "search employee with name {FirstName}",
+          "search employee with name {LastName}",
+          "Lookup employee with name {LastName}",
+          "Lookup employee with name {FirstName}",
+          "search employee with role {Role}",
+          "Lookup employee with role {Role}",
+          "search employee {FirstName}",
+          "search employee {LastName}",
+          "employee"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [],
+            "slotType": "AMAZON.US_FIRST_NAME",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Optional",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "What is the first name of the employee?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 2,
+            "name": "FirstName"
+          },
+          {
+            "sampleUtterances": [],
+            "slotType": "AMAZON.US_LAST_NAME",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "What is the last name of the employee?"
+                },
+                {
+                  "contentType": "PlainText",
+                  "content": "Please enter last name of employee"
+                }
+              ],
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\"}",
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "defaultValueSpec": {
+              "defaultValueList": []
+            },
+            "name": "LastName"
+          },
+          {
+            "sampleUtterances": [],
+            "slotType": "AMAZON.ProfessionalType",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Optional",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "What is the role of the employee?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 3,
+            "name": "Role"
+          }
+        ],
+        "dialogCodeHook": {
+          "uri": "arn:aws:lambda:us-east-1:921000151651:function:NewEmployee",
+          "messageVersion": "1.0"
+        }
+      },
+      {
+        "name": "RetirementIntent",
+        "version": "3",
+        "fulfillmentActivity": {
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:921000151651:function:NewEmployee",
+            "messageVersion": "1.0"
+          },
+          "type": "CodeHook"
+        },
+        "sampleUtterances": [
+          "I would like to check retirement information",
+          "Retirement",
+          "Retirement information",
+          "Retirement info",
+          "Check retirement information",
+          "I would like to check retirement info"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [],
+            "slotType": "AMAZON.NUMBER",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "What is your age? Please enter age as number"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "Age"
+          },
+          {
+            "sampleUtterances": [],
+            "slotType": "AMAZON.NUMBER",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "How many years of service have you completed after the age of 45? Please enter your years of service as a number"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 2,
+            "name": "ServiceYears"
+          }
+        ],
+        "dialogCodeHook": {
+          "uri": "arn:aws:lambda:us-east-1:921000151651:function:NewEmployee",
+          "messageVersion": "1.0"
+        }
+      },
+      {
+        "name": "GreetingIntent",
+        "version": "39",
+        "fulfillmentActivity": {
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:921000151651:function:NewEmployee",
+            "messageVersion": "1.0"
+          },
+          "type": "CodeHook"
+        },
+        "sampleUtterances": [
+          "Hello",
+          "Hi",
+          "Hey",
+          "Hallo",
+          "Good morning",
+          "Good afternoon",
+          "Hiya",
+          "Good evening",
+          "morning",
+          "evening",
+          "afternoon",
+          "hullo",
+          "Helloo",
+          "Hellooo",
+          "yes"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [],
+            "slotType": "UserChoice",
+            "slotTypeVersion": "1",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Hello! I am your chatbot. I can search employee directory, public holidays and retirement benefits information."
+                }
+              ],
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[{\"title\":\"Please select an option\",\"buttons\":[{\"text\":\"Employee Directory\",\"value\":\"EmployeeDirectory\"},{\"text\":\"Retirement \",\"value\":\"Retirement\"},{\"text\":\"Public Holidays\",\"value\":\"PublicHolidays\"}]}]}",
+              "maxAttempts": 2
+            },
+            "priority": 2,
+            "defaultValueSpec": {
+              "defaultValueList": []
+            },
+            "name": "Choices"
+          }
+        ],
+        "followUpPrompt": {
+          "prompt": {
+            "messages": [
+              {
+                "groupNumber": 1,
+                "contentType": "PlainText",
+                "content": "Please select option again to confirm"
+              },
+              {
+                "groupNumber": 1,
+                "contentType": "PlainText",
+                "content": "Please reselect option for confirmation"
+              }
+            ],
+            "maxAttempts": 3
+          },
+          "rejectionStatement": {
+            "messages": [
+              {
+                "groupNumber": 1,
+                "contentType": "PlainText",
+                "content": "OK. Thank you! Have a great day."
+              },
+              {
+                "groupNumber": 1,
+                "contentType": "PlainText",
+                "content": "OK. Thank you! Goodbye!"
+              }
+            ]
+          }
+        },
+        "dialogCodeHook": {
+          "uri": "arn:aws:lambda:us-east-1:921000151651:function:NewEmployee",
+          "messageVersion": "1.0"
+        }
+      },
+      {
+        "name": "HolidayIntent",
+        "version": "9",
+        "fulfillmentActivity": {
+          "codeHook": {
+            "uri": "arn:aws:lambda:us-east-1:921000151651:function:NewEmployee",
+            "messageVersion": "1.0"
+          },
+          "type": "CodeHook"
+        },
+        "sampleUtterances": [
+          "Holiday",
+          "show holidays",
+          "view holidays",
+          "Display holidays",
+          "Holidays",
+          "Federal holidays",
+          "Public Holidays",
+          "Bank holidays",
+          "Holidays in {TheYear}",
+          "Public holidays in {TheYear}",
+          "Check upcoming holidays in {TheYear}",
+          "{TheYear} holidays",
+          "{TheYear} public holidays",
+          "{TheYear} bank holidays"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [],
+            "slotType": "AMAZON.NUMBER",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "Would you like to check holidays for this year or next year? Please enter year as a number"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 2,
+            "name": "TheYear"
+          }
+        ],
+        "dialogCodeHook": {
+          "uri": "arn:aws:lambda:us-east-1:921000151651:function:NewEmployee",
+          "messageVersion": "1.0"
+        }
+      },
+      {
+        "name": "PtoIntent",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [],
+        "slots": []
+      }
+    ],
+    "slotTypes": [
+      {
+        "description": "Choice selection",
+        "name": "UserChoice",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "PublicHolidays"
+          },
+          {
+            "value": "EmployeeDirectory"
+          },
+          {
+            "value": "Retirement"
+          }
+        ],
+        "valueSelectionStrategy": "ORIGINAL_VALUE"
+      }
+    ],
+    "voiceId": "Joanna",
+    "childDirected": false,
+    "locale": "en-US",
+    "idleSessionTTLInSeconds": 300,
+    "clarificationPrompt": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, can you please repeat that?"
+        }
+      ],
+      "maxAttempts": 5
+    },
+    "abortStatement": {
+      "messages": [
+        {
+          "contentType": "PlainText",
+          "content": "Sorry, I could not understand. Please visit atlantafed.org for more information. Goodbye!"
+        }
+      ]
+    },
+    "detectSentiment": false,
+    "enableModelImprovements": true
+  }
+}
