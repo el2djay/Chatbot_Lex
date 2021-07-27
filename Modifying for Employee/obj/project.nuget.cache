@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "EzJCrGsBwyfHtmJbVc3UHEBueMR7K+c8ZxjOYEuxFKRLVJkYgClDA90vOrWBv5F5/Y10uQZbIciNi9Ap9HGnxQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\El2djay\\Source\\Repos\\Chatbot_Lex\\Modifying for Employee\\Chatbot1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\El2djay\\.nuget\\packages\\amazon.lambda.core\\1.2.0\\amazon.lambda.core.1.2.0.nupkg.sha512",
+    "C:\\Users\\El2djay\\.nuget\\packages\\amazon.lambda.lexevents\\2.1.0\\amazon.lambda.lexevents.2.1.0.nupkg.sha512",
+    "C:\\Users\\El2djay\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.1.0\\amazon.lambda.serialization.systemtextjson.2.1.0.nupkg.sha512",
+    "C:\\Users\\El2djay\\.nuget\\packages\\nager.date\\1.29.2\\nager.date.1.29.2.nupkg.sha512"
+  ],
+  "logs": []
+}

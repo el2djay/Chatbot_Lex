@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\El2djay\\Desktop\\Modifying for Employee\\Chatbot1.csproj": {}
+    "C:\\Users\\El2djay\\Source\\Repos\\Chatbot_Lex\\Modifying for Employee\\Chatbot1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\El2djay\\Desktop\\Modifying for Employee\\Chatbot1.csproj": {
+    "C:\\Users\\El2djay\\Source\\Repos\\Chatbot_Lex\\Modifying for Employee\\Chatbot1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\El2djay\\Desktop\\Modifying for Employee\\Chatbot1.csproj",
+        "projectUniqueName": "C:\\Users\\El2djay\\Source\\Repos\\Chatbot_Lex\\Modifying for Employee\\Chatbot1.csproj",
         "projectName": "Chatbot1",
-        "projectPath": "C:\\Users\\El2djay\\Desktop\\Modifying for Employee\\Chatbot1.csproj",
+        "projectPath": "C:\\Users\\El2djay\\Source\\Repos\\Chatbot_Lex\\Modifying for Employee\\Chatbot1.csproj",
         "packagesPath": "C:\\Users\\El2djay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\El2djay\\Desktop\\Modifying for Employee\\obj\\",
+        "outputPath": "C:\\Users\\El2djay\\Source\\Repos\\Chatbot_Lex\\Modifying for Employee\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -80,11 +80,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
         }
       }
     }
